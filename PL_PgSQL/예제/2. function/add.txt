@@ -1,0 +1,8 @@
+create or replace function add(a integer, b integer)
+	returns integer	as
+$$
+	begin
+		return a + b;
+	end;
+$$
+language plpgsql;

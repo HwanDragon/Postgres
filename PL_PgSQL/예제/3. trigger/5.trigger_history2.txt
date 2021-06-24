@@ -1,0 +1,16 @@
+create or replace function trigger_history()
+	returns trigger as
+$$
+	declare
+		name varchar := new.name;
+		age integer := new.age;
+		address varchar := new.address;
+	begin
+		insert into history values(name, age, address);
+		raise notice 'name is %', name;
+		raise notice 'age is %', age;
+		raise notice 'address is %', address;
+		return NULL;
+	end;
+$$
+language plpgsql;

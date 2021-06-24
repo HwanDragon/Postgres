@@ -1,0 +1,8 @@
+create or replace function mul(a integer, b integer)
+	returns integer	as
+$$
+	begin
+		return a * b;
+	end;
+$$
+language plpgsql;

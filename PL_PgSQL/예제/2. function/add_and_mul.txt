@@ -1,0 +1,12 @@
+create or replace function add_and_mul(a integer, b integer, c integer)
+	returns integer as
+$$
+	begin
+		if c = 1 then
+			return add(a,b);
+		else
+			return mul(a,b);
+		end if;
+	end;
+$$
+language plpgsql;

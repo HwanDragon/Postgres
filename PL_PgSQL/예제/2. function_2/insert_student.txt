@@ -1,0 +1,16 @@
+create or replace function insert_student(a integer)
+	returns boolean as
+$$
+	declare
+		name varchar := 'name';
+		age integer := 3;
+		address varchar := 'address';
+		
+	begin
+		for num in 1..a loop
+			insert into student values(name, age, address);
+		end loop;
+		return true;
+	end;
+$$
+language plpgsql;

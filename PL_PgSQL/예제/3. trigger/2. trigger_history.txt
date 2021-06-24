@@ -1,0 +1,10 @@
+create or replace function trigger_history()
+	returns trigger as
+$$
+	declare
+	begin
+		insert into history values(new.name, new.age, new.address);
+		return NULL;
+	end;
+$$
+language plpgsql;

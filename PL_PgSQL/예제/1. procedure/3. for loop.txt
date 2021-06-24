@@ -1,0 +1,13 @@
+create or replace procedure loop_procedure(name varchar, age integer, address varchar, count integer)
+	as 
+$$
+	declare
+	begin
+		for num in 1..count loop
+			insert into student values(name, age, address);
+		end loop;
+	end;
+$$
+language plpgsql;
+
+-- call loop_procedure('test', 23, 'test', 10); 호출

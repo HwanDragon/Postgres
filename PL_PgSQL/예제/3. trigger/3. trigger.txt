@@ -1,0 +1,4 @@
+create trigger save_history
+after insert or update on student
+for each row
+execute procedure trigger_history();

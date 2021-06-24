@@ -1,0 +1,17 @@
+create or replace procedure test()
+	as 
+$$
+	declare
+		name varchar := 'test';
+		age integer := 4;
+		address varchar := 'test';
+	begin
+		insert into student values(name, age, address);
+		insert into student values(name, age, address);
+		insert into student values(name, age, address);
+		insert into student values(name, age, address);
+	end;
+$$
+language plpgsql;
+
+-- call test(); 호출

@@ -1,0 +1,6 @@
+create table history
+(
+	name varchar,
+	age integer,
+	address varchar
+)
